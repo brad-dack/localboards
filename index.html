@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Local Boards | Free A-frame boards for Perth venues</title>
+<meta name="description" content="We put a free double-sided A-frame board outside Perth cafes, salons and barbers. Six local businesses share a printed spot on it for $600 a year.">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_AU">
+<meta property="og:url" content="https://localboards.com.au/">
+<meta property="og:title" content="Local Boards | Free A-frame boards for Perth venues">
+<meta property="og:description" content="A free double-sided A-frame for your cafe, salon or barber. Six local businesses share a printed spot on it for $600 a year.">
+<meta property="og:image" content="https://localboards.com.au/img/board.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --white:#FFFFFF;
+  --page:#F2F2F0;
+  --ink:#111312;
+  --grey:#5C625E;
+  --rule:#111312;
+  --navy:#1B4C8C;
+  --teal:#10797A;
+  --gold:#B8912A;
+  --orange:#E8811F;
+  --green:#5FA637;
+  --red:#A81C22;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+  color-scheme:light;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-padding-top:calc(64px + env(safe-area-inset-top,0px));-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--white);color:var(--ink);
+  font-family:"Barlow",system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  font-size:17.5px;line-height:1.55;-webkit-font-smoothing:antialiased}
+h1,h2,h3,.num{font-family:"Archivo Black","Arial Black",Impact,sans-serif;font-weight:400;letter-spacing:-0.02em;line-height:1;margin:0}
+h1{font-size:clamp(2.1rem,5.4vw,3.7rem);line-height:.98}
+h2{font-size:clamp(1.65rem,3.4vw,2.5rem)}
+h3{font-size:1.06rem;letter-spacing:-0.01em;line-height:1.15}
+p{margin:0 0 1rem;max-width:62ch}
+a{color:inherit}
+img{display:block;max-width:100%}
+.wrap{width:100%;max-width:1160px;margin:0 auto;padding:0 22px}
+.band{padding:66px 0}
+.band-page{background:var(--page)}
+.band-ink{background:var(--ink);color:var(--white)}
+.band-ink h2,.band-ink h3{color:var(--white)}
+.band-ink p{color:#C9CDC9}
+.lede{font-size:1.1rem;color:var(--grey);max-width:56ch;margin-top:14px}
+.band-ink .lede{color:#C9CDC9}
+
+/* wordmark */
+.wm{font-family:"Archivo Black",Arial,sans-serif;letter-spacing:-0.03em}
+.wm i{font-style:normal;color:var(--red)}
+
+/* header */
+.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:var(--white);border-bottom:3px solid var(--rule)}
+.top-in{display:flex;align-items:center;height:64px;gap:26px}
+.top .wm{font-size:1.2rem;text-decoration:none}
+.top nav{margin-left:auto;display:flex;gap:24px;font-size:.95rem;font-weight:500}
+.top nav a{text-decoration:none;color:var(--grey)}
+.top nav a:hover{color:var(--ink)}
+@media (max-width:820px){.top nav{display:none}}
+
+/* buttons */
+.btn{display:inline-block;padding:15px 24px;text-decoration:none;font-weight:700;font-size:1rem;line-height:1;border:3px solid var(--ink);background:var(--ink);color:var(--white)}
+.btn-line{background:transparent;color:var(--ink)}
+.btn:hover{background:var(--red);border-color:var(--red);color:#fff}
+.band-ink .btn{background:var(--white);color:var(--ink);border-color:var(--white)}
+.band-ink .btn-line{background:transparent;color:var(--white)}
+.band-ink .btn:hover{background:var(--red);border-color:var(--red);color:#fff}
+.btns{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+
+/* hero */
+.hero{display:grid;grid-template-columns:1fr 1fr;min-height:min(84vh,780px);border-bottom:3px solid var(--rule)}
+.hero-copy{padding:56px 22px 56px max(22px,calc((100vw - 1160px)/2 + 22px));display:flex;flex-direction:column;justify-content:center}
+.hero-copy p{font-size:1.12rem;color:var(--grey);max-width:44ch}
+.hero-photo{background:#DADAD6 url("img/hero.jpg") center 42%/cover no-repeat;min-height:52vh}
+.hero-strap{display:flex;flex-wrap:wrap;gap:0;border-top:3px solid var(--rule);border-bottom:3px solid var(--rule)}
+.hero-strap div{flex:1 1 200px;padding:16px 22px;font-weight:600;font-size:.95rem;border-right:3px solid var(--rule)}
+.hero-strap div:last-child{border-right:0}
+.hero-strap span{display:block;font-family:"Archivo Black",Arial,sans-serif;font-size:1.5rem;letter-spacing:-0.02em}
+@media (max-width:880px){
+  .hero{grid-template-columns:1fr;min-height:0}
+  .hero-copy{padding:36px 22px 40px}
+  .hero-photo{min-height:48vh;border-top:3px solid var(--rule)}
+}
+
+/* anatomy */
+.anat{display:grid;grid-template-columns:1.1fr 1fr;gap:50px;align-items:center;margin-top:36px}
+@media (max-width:880px){.anat{grid-template-columns:1fr;gap:30px}}
+.anat img{border:3px solid var(--rule);width:100%}
+.spec{display:grid;grid-template-columns:64px 1fr;gap:18px;padding:16px 0;border-bottom:1px solid rgba(92,98,94,.35)}
+.spec:first-child{border-top:1px solid rgba(92,98,94,.35)}
+.spec .num{font-size:1.3rem}
+.spec p{margin:5px 0 0;font-size:.98rem;color:var(--grey)}
+.band-ink .spec{border-color:rgba(255,255,255,.22)}
+.band-ink .spec p{color:#C9CDC9}
+
+/* how */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);margin-top:36px;border:3px solid var(--rule)}
+.step{padding:24px;border-right:3px solid var(--rule)}
+.step:last-child{border-right:0}
+.step p{font-size:.96rem;color:var(--grey);margin:8px 0 0}
+@media (max-width:880px){
+  .steps{grid-template-columns:1fr 1fr}
+  .step{border-bottom:3px solid var(--rule)}
+  .step:nth-child(2n){border-right:0}
+  .step:nth-child(n+3){border-bottom:0}
+}
+@media (max-width:540px){
+  .steps{grid-template-columns:1fr}
+  .step{border-right:0;border-bottom:3px solid var(--rule)}
+  .step:last-child{border-bottom:0}
+}
+
+/* options */
+.duo{display:grid;grid-template-columns:1fr 1fr;gap:26px;margin-top:34px}
+@media (max-width:820px){.duo{grid-template-columns:1fr}}
+.opt{border:3px solid var(--rule);padding:26px;background:var(--white)}
+.opt .tag{display:inline-block;background:var(--ink);color:var(--white);font-weight:700;font-size:.82rem;padding:5px 10px;margin-bottom:14px}
+.opt ul{list-style:none;margin:16px 0 0;padding:0;font-size:.97rem}
+.opt li{padding-left:20px;position:relative;margin-bottom:8px;color:var(--grey)}
+.opt li::before{content:"";position:absolute;left:0;top:.6em;width:10px;height:3px;background:var(--red)}
+.opt p{color:var(--grey);margin:0}
+.opt-img{width:calc(100% + 52px);margin:-26px -26px 22px;border-bottom:3px solid var(--rule);height:230px;object-fit:cover;object-position:center 38%}
+
+/* tile grid, echoing the board itself */
+.tilegrid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:34px}
+@media (max-width:760px){.tilegrid{grid-template-columns:1fr 1fr;gap:10px}}
+.tile{padding:22px 18px;color:#fff;min-height:118px;display:flex;flex-direction:column;justify-content:flex-end}
+.tile b{font-family:"Archivo Black",Arial,sans-serif;font-weight:400;font-size:1.02rem;line-height:1.1}
+.tile span{font-size:.88rem;opacity:.9;margin-top:5px}
+.t1{background:var(--navy)}.t2{background:var(--teal)}.t3{background:var(--gold)}
+.t4{background:var(--orange)}.t5{background:var(--green)}.t6{background:var(--ink)}
+.t3,.t4,.t5{color:var(--ink)}
+
+/* price */
+.price{display:grid;grid-template-columns:auto 1fr;gap:44px;align-items:center;border:3px solid var(--rule);padding:34px;margin-top:34px}
+@media (max-width:760px){.price{grid-template-columns:1fr;gap:18px;padding:24px}}
+.price .fig{font-family:"Archivo Black",Arial,sans-serif;font-size:clamp(3rem,10vw,5rem);line-height:.85;letter-spacing:-0.04em}
+.price .fig small{display:block;font-family:"Barlow",sans-serif;font-weight:600;font-size:.92rem;letter-spacing:0;line-height:1.4;margin-top:12px;color:var(--grey)}
+.price p:last-child{margin-bottom:0}
+
+/* detail photo */
+.detail{border-top:3px solid var(--rule);border-bottom:3px solid var(--rule)}
+.detail img{width:100%;height:clamp(240px,34vw,420px);object-fit:cover;object-position:center 45%}
+/* keep the small ad tiles out of frame on phones; their text is garbled */
+@media (max-width:480px){.detail img{object-position:center 30%}}
+
+/* venue tags */
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:24px;list-style:none;padding:0}
+.tags li{border:2px solid var(--ink);padding:6px 12px;font-size:.92rem;font-weight:500}
+
+/* faq */
+.faq{margin-top:30px;max-width:76ch}
+.faq details{border-bottom:1px solid rgba(92,98,94,.35)}
+.faq details:first-of-type{border-top:1px solid rgba(92,98,94,.35)}
+.faq summary{cursor:pointer;padding:17px 0;font-weight:700;list-style:none;display:flex;justify-content:space-between;gap:18px;align-items:baseline}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";font-family:"Archivo Black",Arial,sans-serif;color:var(--red);font-size:1.1rem}
+.faq details[open] summary::after{content:"\2013"}
+.faq p{margin:0 0 17px;color:var(--grey);font-size:.99rem}
+
+footer{border-top:3px solid var(--rule);padding:30px 0 44px;font-size:.92rem;color:var(--grey)}
+.foot-in{display:flex;flex-wrap:wrap;gap:14px;justify-content:space-between;align-items:center}
+footer .wm{font-size:1.05rem;color:var(--ink)}
+:focus-visible{outline:3px solid var(--red);outline-offset:2px}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap top-in">
+    <a class="wm" href="#top">local<i>boards</i></a>
+    <nav>
+      <a href="#board">The board</a>
+      <a href="#how">How it works</a>
+      <a href="#venues">For venues</a>
+      <a href="#advertise">Advertise</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <section class="hero">
+    <div class="hero-copy">
+      <h1>The board is free. Six local businesses pay for it.</h1>
+      <p>We put a double-sided A-frame outside Perth cafes, salons, barbers and waiting rooms. The venue writes on the big chalk panel. Six nearby businesses buy a printed spot underneath.</p>
+      <div class="btns">
+        <a class="btn" href="#venues">Get a free board</a>
+        <a class="btn btn-line" href="#advertise">Put your ad on one</a>
+      </div>
+    </div>
+    <div class="hero-photo" role="img" aria-label="A double-sided A-frame board on the footpath outside a Maylands barber shop, the shop name printed on top, chalk specials in the middle and six printed local business ads below."></div>
+  </section>
+
+  <div class="hero-strap">
+    <div><span>$0</span>Cost to the venue</div>
+    <div><span>6</span>Ad spots per board</div>
+    <div><span>12</span>Months on the footpath</div>
+    <div><span>600 &times; 900</span>Millimetres, both sides</div>
+  </div>
+
+  <section class="band band-ink" id="board">
+    <div class="wrap">
+      <h2>What is on it</h2>
+      <p class="lede">Every board is built the same way, so somebody walking past reads it the same way at every venue.</p>
+      <div class="anat">
+        <img src="img/board.jpg" width="896" height="1200" loading="lazy" alt="Close view of a Local Boards A-frame showing the four bands: venue header, chalk panel, six ad tiles and the bottom banner.">
+        <div>
+          <div class="spec"><span class="num">01</span><div><h3>The venue's name on top</h3><p>Printed with their logo and suburb. The board reads as the shop's board, not an advertiser's.</p></div></div>
+          <div class="spec"><span class="num">02</span><div><h3>A chalk panel they own</h3><p>Matt blackboard vinyl made for liquid chalk pens. Wipes clean, handles the weather, rewritten as often as they like.</p></div></div>
+          <div class="spec"><span class="num">03</span><div><h3>Six printed ad spots</h3><p>Two rows of three, sized to be read from the footpath. One business per spot for twelve months.</p></div></div>
+          <div class="spec"><span class="num">04</span><div><h3>A banner at the bottom</h3><p>Our address and a QR code, so anyone who wants their own board or a spot on one can find us on the spot.</p></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band" id="how">
+    <div class="wrap">
+      <h2>How it works</h2>
+      <p class="lede">Four steps, whichever side of it you are on.</p>
+      <div class="steps">
+        <div class="step"><h3>We find the venue</h3><p>A busy shopfront with footpath room. They pay nothing, ever, and can knock back any ad we bring them.</p></div>
+        <div class="step"><h3>We fill six spots</h3><p>Businesses from the surrounding suburbs. One per trade per board, so a plumber never sits beside a plumber.</p></div>
+        <div class="step"><h3>We print and install</h3><p>Artwork set up, board printed, delivered and stood up out the front. Nothing to assemble.</p></div>
+        <div class="step"><h3>It runs a year</h3><p>Then the ad panels are reprinted with the new lineup. The board stays put and we keep it in good shape.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="detail"><img src="img/street.jpg" width="896" height="1199" loading="lazy" alt="A board standing on a suburban Perth shopping strip outside a hair salon as a woman walks past."></div>
+
+  <section class="band band-page" id="venues">
+    <div class="wrap">
+      <h2>For venues</h2>
+      <p class="lede">You get a board worth a few hundred dollars for nothing, because the six advertisers pay for it. Two versions, pick whichever suits the shop.</p>
+      <div class="duo">
+        <div class="opt">
+          <img class="opt-img" src="img/chalk.jpg" width="760" height="725" loading="lazy" alt="A hand writing the soup of the day on the matt black chalk panel of a board inside a cafe.">
+          <span class="tag">Option A</span>
+          <h3>The specials board</h3>
+          <p>The big panel is yours. Coffee of the week, the lunch special, hours over a long weekend, a hiring notice.</p>
+          <ul>
+            <li>Liquid chalk pens included</li>
+            <li>Your logo and suburb printed across the top</li>
+            <li>Rewrite it as often as you like</li>
+          </ul>
+        </div>
+        <div class="opt">
+          <span class="tag">Option B</span>
+          <h3>The open board, plus a free ad</h3>
+          <p>Not a specials business? We print a fixed board instead, along the lines of "We are open, come in". No writing, no upkeep.</p>
+          <ul>
+            <li>Fully printed, nothing to maintain</li>
+            <li>A free ad spot for you on another local board</li>
+            <li>Puts you on a street you are not on</li>
+          </ul>
+        </div>
+      </div>
+      <h3 style="margin-top:42px;font-size:1.3rem">You decide who appears on it</h3>
+      <p style="margin-top:10px">Before anything is printed we send you the six businesses we are proposing. Veto anyone you compete with, or anyone you would rather not be seen next to. We only ask for an answer inside a few days so the other advertisers are not left waiting.</p>
+      <ul class="tags">
+        <li>Cafes</li><li>Hair salons</li><li>Barbers</li><li>Nail and beauty</li><li>Medical waiting rooms</li><li>Physio and chiro</li><li>Vets</li><li>Gyms</li><li>Bakeries</li><li>Bottle shops</li>
+      </ul>
+      <div class="btns"><a class="btn" href="mailto:hello@localboards.com.au?subject=Free%20board%20for%20my%20venue">Ask for a board</a></div>
+    </div>
+  </section>
+
+  <section class="band" id="advertise">
+    <div class="wrap">
+      <h2>For advertisers</h2>
+      <p class="lede">A printed spot outside a shop your customers already walk past, every day, for a year. Not an impression and not a click. A sign on their street.</p>
+      <div class="price">
+        <div class="fig">$600<small>per spot, per year<br>Australian dollars</small></div>
+        <div>
+          <p>That covers artwork setup, printing, the board, installation and the full twelve months. Nothing else to pay and no monthly billing.</p>
+          <p>Six spots per board and one business per trade, so you are never beside a direct competitor. Once a trade is taken on a board, it is taken.</p>
+        </div>
+      </div>
+      <p style="margin-top:34px">Who it suits:</p>
+      <div class="tilegrid">
+        <div class="tile t1"><b>Trades</b><span>Plumbers, electricians, roofers</span></div>
+        <div class="tile t2"><b>Health</b><span>Dentists, physios, chiros, podiatry</span></div>
+        <div class="tile t3"><b>Property</b><span>Agents, brokers, building inspectors</span></div>
+        <div class="tile t4"><b>Home services</b><span>Cleaners, gardeners, pest control</span></div>
+        <div class="tile t5"><b>Fitness</b><span>Gyms, PTs, pilates, swim schools</span></div>
+        <div class="tile t6"><b>Local services</b><span>Mechanics, groomers, tutors</span></div>
+      </div>
+      <div class="btns"><a class="btn" href="mailto:hello@localboards.com.au?subject=Ad%20spot%20enquiry">Check what is free near me</a></div>
+    </div>
+  </section>
+
+  <section class="band band-page">
+    <div class="wrap">
+      <h2>Want a board of your own?</h2>
+      <p class="lede">Some businesses would rather not share. We also supply plain custom A-frames printed with only your branding, built the same way as ours. Tell us what you need and we will quote it.</p>
+      <div class="btns"><a class="btn btn-line" href="mailto:hello@localboards.com.au?subject=Custom%20A-frame%20quote">Get a quote</a></div>
+    </div>
+  </section>
+
+  <section class="band">
+    <div class="wrap">
+      <h2>Questions</h2>
+      <div class="faq">
+        <details><summary>What does the venue pay?</summary><p>Nothing. Not for the board, the printing, the delivery or the pens. The six advertisers cover all of it.</p></details>
+        <details><summary>Who owns the board?</summary><p>We do, and we look after it. If it gets damaged or looks tired we replace it. The venue just puts it out and brings it in.</p></details>
+        <details><summary>Can the venue reject an advertiser?</summary><p>Yes. We show the venue every business before anything is printed, and they can veto a competitor or anyone else they are not comfortable with.</p></details>
+        <details><summary>What happens after twelve months?</summary><p>Advertisers choose whether to renew. We reprint the ad panels with the new lineup and the board stays where it is.</p></details>
+        <details><summary>Can I change my ad mid year?</summary><p>Get in touch. A small change like a new phone number can usually wait for the next reprint. A full redesign means a new panel and a print cost.</p></details>
+        <details><summary>What if the venue closes or moves?</summary><p>We move the board to another venue nearby and reprint the header. Your spot keeps running for the rest of the twelve months.</p></details>
+        <details><summary>Where do you operate?</summary><p>Perth metro, one area at a time, so every board carries genuinely local advertisers rather than businesses from the other side of the city.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <section class="band band-ink" id="contact">
+    <div class="wrap">
+      <h2>Two ways in</h2>
+      <p class="lede">Tell us your suburb and we will tell you what is already on a board near you.</p>
+      <div class="btns">
+        <a class="btn" href="mailto:hello@localboards.com.au?subject=Free%20board%20for%20my%20venue">I run a venue</a>
+        <a class="btn btn-line" href="mailto:hello@localboards.com.au?subject=Ad%20spot%20enquiry">I want to advertise</a>
+      </div>
+      <p style="margin-top:26px"><a href="mailto:hello@localboards.com.au">hello@localboards.com.au</a></p>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap foot-in">
+    <span class="wm">local<i>boards</i>.com.au</span>
+    <span>Perth, Western Australia</span>
+    <span>&copy; 2026 Local Boards</span>
+  </div>
+</footer>
+
+</body>
+</html>

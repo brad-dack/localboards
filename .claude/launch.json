@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "site",
+      "runtimeExecutable": "node",
+      "runtimeArgs": ["-e", "const h=require('http'),f=require('fs'),p=require('path'),t={'.html':'text/html','.jpg':'image/jpeg','.svg':'image/svg+xml'};h.createServer((q,r)=>{let u=decodeURIComponent(q.url.split('?')[0]);if(u.endsWith('/'))u+='index.html';f.readFile(p.join(process.cwd(),u),(e,d)=>{if(e){r.writeHead(404);return r.end()}r.writeHead(200,{'Content-Type':t[p.extname(u)]||'application/octet-stream'});r.end(d)})}).listen(5500)"],
+      "port": 5500
+    }
+  ]
+}
